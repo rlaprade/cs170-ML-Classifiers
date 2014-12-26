@@ -1,0 +1,22 @@
+
+
+(a)
+T=1 Error rate: 12.6%
+T=2 Error rate: 13.6%
+T=5 Error rate: 8.4%
+T=10 Error rate: 11.0%
+T=25 Error rate: 9.0%
+
+T=5 was our best value.
+
+(b)
+Tie-breaking is arbitrary. It is up to the mysterious whims of Python's max function called on a dictionary. On my installation of Python, it seems to favor 0 over 1.
+
+(c) 
+Stop Condidions:
+    1.  100% homogenous
+    2.  depth >= 10
+    3.  entropy(data) < 0.3
+
+(d)
+Our implementation follows that described in the homework. However, we calculate potential threshholds for splitting conditions at the very beginning (so it is the same for all trees and forests), rather than at each node.

@@ -1,0 +1,21 @@
+
+
+(a)
+k=1 Error rate: 8.9%
+k=2 Error rate: 10.1%
+k=5 Error rate: 9.7%
+k=10 Error rate: 11.6%
+k=25 Error rate: 13.1%
+
+k =1 was our best value.
+
+(b)
+Tie-breaking is arbitrary. It is up to the mysterious whims of Python's max function called on a dictionary.
+
+(c) 
+There was not a significant difference between k=1 and k=2 in terms of accuracy.  k=2 is really no better than k=1 since if the 2 nearest neighbors are the same it would be the same as k=1, and if they differ than one of them will be chosen (based on the tie-breaking rule), so it can't really be any better (especially since the nearer neighbor is more likely to be better).
+
+(d)
+Sample failed digits: 4th, 15th, 16th, 40st, 51st, 63rd
+The difference between 3s and 5s is not well-understood by this classifier. 1s and 7s are also hard to distinguish between. Many of the failures appear to be from extremely messy handwriting - 2s that curve all the way around and almost become 0s, 7s that are basically just a straight line, etc.
+One very useful feature could be checking how many contiguous sections of whitespace there are (through something like a DFS). This could help distinguish between 9s and 7s (since 9s should have an extra section of whitespace). Also, features for the sum of pixels in each line or column could also be useful. Also, the sum of the intensity of all pixels could be useful.
